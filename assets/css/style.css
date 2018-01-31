@@ -1,0 +1,16 @@
+.form-background,
+.head-class,
+.table-class{
+    width:80%;
+    margin-left: 10%;
+    margin-bottom: 70px;
+}
+.form-background{
+    background-color: rgba(235, 230, 230, 0.664);
+    padding: 3px;
+}
+.form-class{
+    width: 76%;
+    margin: 3% 12%;  
+}
+
