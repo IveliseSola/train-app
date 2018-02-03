@@ -1,9 +1,20 @@
+
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
 .form-background,
 .head-class,
 .table-class{
     width:80%;
     margin-left: 10%;
     margin-bottom: 70px;
+    background-color: rgba(235, 230, 230, 0.993);
+}
+
+.head-class h1{
+    text-align: center;
 }
 .form-background{
     background-color: rgba(235, 230, 230, 0.664);
