@@ -36,9 +36,30 @@
         $("#frecuency-input").val("");
     });
 
+    database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 
+        var name = childSnapshot.val().nameTrain;
+        var dest = childSnapshot.val().destination;
+        var initialTime = childSnapshot.val().start;
+        var frec = childSnapshot.val().frecuency;
+       
+        var currentTime = moment();
+        var start = moment.utc(initialTime, "HH:mm");
+        var end = moment.utc(currentTime, "HH:mm");
+        var d = moment.duration(start.diff(end));
+        var totalMinutesDif = (d._data.hours) * 60 + d._data.minutes;
+        var minutesAway = frec - (totalMinutesDif % frec);
+        var nextTrainTime = moment(currentTime).add(minutesAway,"minutes").format("HH:mm");
+       
+        // console.log(start);
+        // console.log(end);
+        // console.log(d);
+        // console.log(totalMinutesDif);
+        // console.log(minutesAway);
+        // console.log(nextTrainTime);
 
-    // var currentTime = moment();
+    });        
+
     // console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
     //   function timeCalculator(parameter1, parameter2){
 
