@@ -46,8 +46,8 @@
         var currentTime = moment();
         var start = moment.utc(initialTime, "HH:mm");
         var end = moment.utc(currentTime, "HH:mm");
-        var d = moment.duration(start.diff(end));
-        var totalMinutesDif = (d._data.hours) * 60 + d._data.minutes;
+        var d = moment.duration(end.diff(start));
+        var totalMinutesDif = d._data.hours * 60 + d._data.minutes;
         var minutesAway = frec - (totalMinutesDif % frec);
         var nextTrainTime = moment(currentTime).add(minutesAway,"minutes").format("HH:mm a");
        
@@ -58,7 +58,7 @@
         // console.log(minutesAway);
         // console.log(nextTrainTime);
 
-        $(".table-classs > tbody").append("<tr><td>" + name + "</td><td>" + dest + "</td><td>" +
+        $(".table-class > tbody").append("<tr><td>" + name + "</td><td>" + dest + "</td><td>" +
        frec + "</td><td>" + nextTrainTime + "</td><td>" + minutesAway + "</td></tr>");
 
       });
