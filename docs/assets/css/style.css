@@ -1,0 +1,36 @@
+
+
+body{font-family: 'Nunito Sans', sans-serif;
+}
+
+.form-background,
+.head-class,
+.table-section{
+    width:80%;
+    margin-left: 10%;
+    margin-bottom: 70px; 
+}
+
+.form-background,
+.head-class,
+.thead-class {
+    background-color: rgba(235, 230, 230, 0.993);
+}
+
+.head-class h1{text-align: center;}
+
+.form-background{
+    background-color: rgba(235, 230, 230, 0.664);
+    padding: 3px;
+}
+
+.form-class{
+    width: 76%;
+    margin: 3% 12%;  
+}
+
+.form-btn{
+     background-color:rgb(204, 203, 203);
+     color:rgb(14, 13, 13);
+}
+
